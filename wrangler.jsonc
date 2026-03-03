@@ -1,0 +1,24 @@
+{
+  // Cloudflare Workers configuration for NRSgirls.com
+  // See: https://developers.cloudflare.com/workers/wrangler/configuration/
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "nrsgirls-worker",
+  // Entry point for the Worker (create this file when implementing the Worker)
+  "main": "src/index.js",
+  "compatibility_date": "2025-01-01",
+  "compatibility_flags": [],
+
+  // Environment-specific configurations
+  // Development environment
+  "env": {
+    "development": {
+      "name": "nrsgirls-worker-dev"
+    },
+    "staging": {
+      "name": "nrsgirls-worker-staging"
+    },
+    "production": {
+      "name": "nrsgirls-worker-production"
+    }
+  }
+}
